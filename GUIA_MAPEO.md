@@ -20,7 +20,7 @@ Cada persona que camina con su celular y la app **OSMTracker** agrega informaci�
 
 **¿Para qué?** Para saber qué rutas sirven a todas las personas, qué hay que arreglar y tener datos concretos para pedir mejoras a la administración del lugar o a la municipalidad.
 
-🔗 **Ver el mapa:** `https://USUARIO.github.io/mapa-plaza-real/`
+🔗 **Ver el mapa:** `https://alvarocastrou.github.io/mapa-plaza-real/`
 
 ---
 
@@ -133,7 +133,7 @@ Cuando termine, toque el menú **⋮** → **Detener y guardar**.
 
 ## 6. Ver el mapa
 
-Abra 🔗 `https://USUARIO.github.io/mapa-plaza-real/` en cualquier celular o computadora.
+Abra 🔗 `https://alvarocastrou.github.io/mapa-plaza-real/` en cualquier celular o computadora.
 
 Unos **2 a 5 minutos** después de subir un recorrido, el mapa se actualiza solo. Si no ve los cambios, recargue la página.
 
