@@ -3,7 +3,7 @@
 Mapa colaborativo y dinámico de **Plaza Real (Alajuela, Costa Rica)** construido con datos capturados en campo con **OSMTracker for Android**.
 Curso **Sistemas de Información Geográfica** – III Evaluación.
 
-- 🗺️ **Mapa público:** https://USUARIO.github.io/mapa-plaza-real/
+- 🗺️ **Mapa público:** https://alvarocastrou.github.io/mapa-plaza-real/
 - 📘 **Guía de mapeo para público general:** [GUIA_MAPEO.md](GUIA_MAPEO.md)
 - 🔘 **Disposición de botones:** https://github.com/AlvaroCastroU/osmtracker-android-layouts/tree/master/layouts/accesibilidad_plaza_real
 
