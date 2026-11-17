@@ -1,0 +1,117 @@
+{
+ "Rampa": {
+  "grupo": "Accesibilidad",
+  "color": "#1f6feb",
+  "simbolo": "♿"
+ },
+ "Escaleras": {
+  "grupo": "Accesibilidad",
+  "color": "#d29922",
+  "simbolo": "☰"
+ },
+ "Obstáculo": {
+  "grupo": "Accesibilidad",
+  "color": "#d1242f",
+  "simbolo": "⚠"
+ },
+ "Acera buena": {
+  "grupo": "Accesibilidad",
+  "color": "#1a7f37",
+  "simbolo": "✔"
+ },
+ "Acera dañada": {
+  "grupo": "Accesibilidad",
+  "color": "#cf222e",
+  "simbolo": "✘"
+ },
+ "Baño accesible": {
+  "grupo": "Accesibilidad",
+  "color": "#0550ae",
+  "simbolo": "WC"
+ },
+ "Parqueo discapacidad": {
+  "grupo": "Accesibilidad",
+  "color": "#0969da",
+  "simbolo": "P"
+ },
+ "Banca": {
+  "grupo": "Mobiliario urbano",
+  "color": "#8a5a00",
+  "simbolo": "▬"
+ },
+ "Basurero": {
+  "grupo": "Mobiliario urbano",
+  "color": "#6e4c13",
+  "simbolo": "♻"
+ },
+ "Bebedero": {
+  "grupo": "Mobiliario urbano",
+  "color": "#0a7ea4",
+  "simbolo": "☕"
+ },
+ "Iluminación": {
+  "grupo": "Mobiliario urbano",
+  "color": "#bf8700",
+  "simbolo": "☀"
+ },
+ "Sombra": {
+  "grupo": "Mobiliario urbano",
+  "color": "#2da44e",
+  "simbolo": "☂"
+ },
+ "Árbol": {
+  "grupo": "Mobiliario urbano",
+  "color": "#116329",
+  "simbolo": "♣"
+ },
+ "Me siento seguro": {
+  "grupo": "Percepción",
+  "color": "#8250df",
+  "simbolo": "☺"
+ },
+ "Me siento inseguro": {
+  "grupo": "Percepción",
+  "color": "#a40e26",
+  "simbolo": "☹"
+ },
+ "Lugar agradable": {
+  "grupo": "Percepción",
+  "color": "#bf3989",
+  "simbolo": "♥"
+ },
+ "Ruido excesivo": {
+  "grupo": "Percepción",
+  "color": "#953800",
+  "simbolo": "♫"
+ },
+ "Poca luz": {
+  "grupo": "Percepción",
+  "color": "#24292f",
+  "simbolo": "☽"
+ },
+ "Zona descuidada": {
+  "grupo": "Percepción",
+  "color": "#6639ba",
+  "simbolo": "⚑"
+ },
+ "Fotografía": {
+  "grupo": "Multimedia",
+  "color": "#57606a",
+  "simbolo": "📷"
+ },
+ "Audio": {
+  "grupo": "Multimedia",
+  "color": "#57606a",
+  "simbolo": "🎤"
+ },
+ "Nota": {
+  "grupo": "Multimedia",
+  "color": "#57606a",
+  "simbolo": "📝"
+ },
+ "Otro": {
+  "grupo": "Multimedia",
+  "color": "#57606a",
+  "simbolo": "•"
+ }
+}
