@@ -1,0 +1,79 @@
+# Se ejecuta cada vez que alguien sube algo al repositorio (por ejemplo, una traza
+# desde OSMTracker). Procesa los GPX con Python, guarda los datos generados en el
+# repositorio y publica el mapa actualizado en GitHub Pages.
+name: Procesar trazas y publicar mapa
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:   # permite ejecutarlo a mano desde la pestaña "Actions"
+
+permissions:
+  contents: write      # para guardar los GeoJSON generados
+  pages: write         # para publicar en GitHub Pages
+  id-token: write
+
+concurrency:           # si llegan varias trazas seguidas, se procesan una tras otra
+  group: procesar-mapa
+  cancel-in-progress: false
+
+jobs:
+  procesar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # historial completo: se usa para saber quién subió cada traza
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+
+      - name: Procesar trazas GPX
+        run: python procesar_gpx.py
+
+      - name: Guardar los datos generados en el repositorio
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No hay cambios en los datos."
+          else
+            git commit -m "Actualizar datos del mapa [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Armar el sitio web
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r config datos _site/
+          touch _site/.nojekyll
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir el sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  publicar:
+    needs: procesar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
